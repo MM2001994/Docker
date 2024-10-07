@@ -4,7 +4,6 @@ EXPOSE 80
 
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
-COPY ["HelloWorldMvc/HelloWorldMvc.csproj", "HelloWorldMvc/"]
 RUN dotnet restore "HelloWorldMvc/HelloWorldMvc.csproj"
 COPY . .
 WORKDIR "/src/HelloWorldMvc"
